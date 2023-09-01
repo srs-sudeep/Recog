@@ -1,28 +1,28 @@
-#gridd {
+ /* #gridd {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 3rem;
   position: relative;
-  /* height:70vh; */
-}
+   height:70vh; 
+  } */
 
-#gridd1 {
-  width: 50%; /* Set width to 50% */
-  z-index: 3; /* Bring grid1 to the front */
+/* #gridd1 {
+  width: 50%; 
+  z-index: 3; 
   right: 0;
   position: absolute;
-}
+} */
 
-#gridd2,
+/* #gridd2,
 #gridd3 {
   position: absolute;
   top: 0;
   left: 0;
-  width: 40%; /* Adjust the width and margin values as needed */
+  width: 40%; 
   height: 42vh;
-}
+} */
 
-#gridd2 {
+/* #gridd2 {
   z-index: 2;
   border-radius: 18px;
   background: linear-gradient(
@@ -37,9 +37,9 @@
     );
   box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(21px);
-}
+} */
 
-#gridd3 {
+/* #gridd3 {
   z-index: 1;
   margin-left: 3rem;
   border-radius: 18px;
@@ -55,11 +55,70 @@
     );
   box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(21px);
+}  */
+
+.About-section{
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 0px;
+  flex-direction: column;
+}
+.content-container{
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  gap:2em;
+  padding: 8px 0px;
+}
+.About-content{
+  margin:10px;
+}
+#about-c-1{
+  width:70%;
+  font-size:1.75em;
+  color: rgb(27, 25, 25);
+}
+#about-c-2{
+  width:30%;
+  font-size:1em;
+  color: rgb(20, 18, 18);
+}
+#outer-cntr-btn{
+  width: 100%;  
+  padding-right: 10%;
+}
+.circle-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 140px;
+  width: 140px;
+  float: right;
+
+  /* padding: 50px; */
+  background-color: rgb(44, 44, 44);
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  border-radius: 50%;
 }
 @media (max-width: 768px) {
-  #gridd {
+  .content-container{
+    flex-direction: column;
+    gap:0em;
+  }
+  #about-c-1{
+  width:100%;
+   font-size:1.33em;
+}
+  #about-c-2{
+  width:60%;
+   font-size:0.9em;
+}  
+  /* #gridd {
     grid-template-columns: 1fr;
-    background-color: #161616; /* Change to a single column layout */
+    background-color: #161616; 
   }
 
   #gridd1 {
@@ -81,35 +140,35 @@
     margin-left: 3rem;
     width: 80%;
     margin-top: 4rem;
-  }
+  } */
 }
 
-#grid {
+/* #grid {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 10px;
   position: relative;
   margin-bottom: 100px;
-}
+} */
 
-#grid1 {
+/* #grid1 {
   grid-column: 1 / 2;
-  width: 50%; /* Set width to 50% */
-  z-index: 3; /* Bring grid1 to the front */
-}
-#grid2,
+  width: 50%; 
+  z-index: 3; 
+} */
+/* #grid2,
 #grid3 {
   position: absolute;
   top: 0;
   left: 55%;
-  /* right: 0; */
-  width: 35vw; /* Adjust the width and margin values as needed */
-}
-#grid2 {
+  
+  width: 35vw; 
+} */
+/* #grid2 {
   z-index: 2;
-  left: 60%;
+  left: 60%; */
   /* font-family: "Inconsolata", monospace; */
-  border-radius: 18px;
+  /* border-radius: 18px;
   background: linear-gradient(
       0deg,
       rgba(40, 169, 226, 0.2) 0%,
@@ -122,16 +181,16 @@
     );
   box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(21px);
-}
-#grid3 {
+} */
+/* #grid3 {
   z-index: 1;
-  margin-right: 60px; /* Add desired gap between grid2 and grid3 */
+  margin-right: 60px; Add desired gap between grid2 and grid3
   height: 100%;
   border-radius: 18px;
   background: linear-gradient(
       0deg,
       rgba(40, 169, 226, 0.2) 0%,
-      rgba(40, 169, 226, 0.2) 100%
+      rgba(40, 169, 226, 0.//2) 100%
     ),
     radial-gradient(
       231% 135.8% at 0.9% 2.98%,
@@ -140,42 +199,42 @@
     );
   box-shadow: 0px -4px 24px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(21px);
-}
+} */
 
 @media (max-width: 768px) {
-  #grid {
+  /* #grid {
     grid-template-columns: 1fr;
   }
 
   #grid1 {
     grid-column: 1 / -1;
-    width: 100vw; /* Take up full width in mobile mode*/
-  }
+    width: 100vw;
+  } */
 
-  #grid2,
+  /* #grid2,
   #grid3 {
     position: absolute;
     left: 1rem;
-    margin-top: 4rem; /* Add desired gap between grid1 and grid2/grid3 */
+    margin-top: 4rem;
     width: 100%;
-  }
+  } */
 
-  #grid2 {
+  /* #grid2 {
     z-index: 2;
     top: 92%;
     margin-left: 1rem;
     width: 85%;
     margin-top: 8rem;
-  }
+  } */
 
-  #grid3 {
+  /* #grid3 {
     z-index: 1;
     top: 90%;
     height: 60%;
     margin-right: 1rem;
-    width: 80%; /* Add desired gap between grid2 and grid3 */
-  }
-}
+    width: 80%; 
+  } 
+}*/
 /* .arrow {
   position: relative;
 } */
@@ -206,4 +265,5 @@
   100% {
     transform: translateX(-35%);
   }
+}
 }
