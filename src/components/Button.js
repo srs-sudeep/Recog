@@ -7,27 +7,31 @@ import { distance } from '../utils/utils';
 const Text = styled(motion.span)`
   display: block;
 
-  &::before,
-  &::after {
+  &::before{
     content: attr(data-text);
     position: absolute;
     top: 50%;
     left: 50%;
-    color: ${({ theme }) => theme.button.default.color};
+    color: white;
     white-space: nowrap;
     transform: translate3d(-50%, -50%, 0);
     transition: all 0.65s ${({ theme }) => theme.transitions.easeOutCirc};
   }
 
-  &::after {
-    color: ${({ theme }) => theme.button.hover.color};
-    transform: translate3d(-50%, 140%, 0);
-  }
+  // &::after {
+  //   color: ${({ theme }) => theme.button.hover.color};
+  //   transform: translate3d(-50%, 140%, 0);
+  // }
 `;
 
 const Style = styled.a`
   position: relative;
   display: inline-flex;
+  align-item:center;
+  justify-content:center;
+  border-radius: 50%;
+  width: 190px;
+  height: 190px;
   margin: 1em;
   padding: 1em 2em;
   font-size: 1.25em;
@@ -35,9 +39,8 @@ const Style = styled.a`
   line-height: 1.25;
   letter-spacing: 0.025em;
   color: ${({ theme }) => theme.button.default.color};
-  background: ${({ theme }) => theme.button.default.background};
-  border: 2px solid ${({ theme }) => theme.button.default.borderColor};
-  border-radius: 0.25em;
+  background-color: #191919;
+  border: 0px solid ${({ theme }) => theme.button.default.borderColor};
   user-select: none;
   cursor: pointer;
   overflow: hidden;
@@ -51,18 +54,18 @@ const Style = styled.a`
   }
 
   &:hover {
-    border-color: ${({ theme }) => theme.button.hover.borderColor};
+    border-color: #455ce9;
 
-    ${Text} {
-      &::before {
-        transform: translate3d(-50%, -300%, 0);
-      }
+    // ${Text} {
+    //   &::before {
+    //     transform: translate3d(-50%, -300%, 0);
+    //   }
 
-      &::after {
-        color: ${({ theme }) => theme.button.hover.color};
-        transform: translate3d(-50%, -50%, 0);
-      }
-    }
+      // &::after {
+      //   color: ${({ theme }) => theme.button.hover.color};
+      //   transform: translate3d(-50%, -50%, 0);
+      // }
+    // }
   }
 `;
 
@@ -75,7 +78,8 @@ const Fill = styled(motion.div)`
   height: 250%;
   display: block;
   border-radius: 50%;
-  background: ${({ theme }) => theme.button.hover.background};
+  border-color: #455ce9;
+  background: #455ce9;
   pointer-events: none;
   transform: translate3d(0, 80%, 0);
 `;

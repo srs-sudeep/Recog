@@ -166,23 +166,23 @@ const Homepage = () => {
             iure. Lorem ipsum dolor sit amet.{" "}
           </div>
           <div id="about-c-2" className="About-content">
-            {" "}
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
-            voluptas!
+            <div>
+              <ThemeProvider theme={lightTheme}>
+                <Normalize />
+                <GlobalStyles />
+                <Page>
+                  <Button ref={hoverRef} onClick={() => console.log("clicked")}>
+                    About us
+                  </Button>
+                </Page>
+              </ThemeProvider>
+            </div>
+            <div>
+              {" "}
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
+              voluptas!
+            </div>
           </div>
-        </div>
-        <div className="content-container">
-          {/* <div id="outer-cntr-btn"><a href="www.google.com" className="circle-btn">About us</a></div> */}
-          <ThemeProvider theme={lightTheme}>
-            <Normalize />
-            <GlobalStyles />
-            <Page>
-              <Button ref={hoverRef} onClick={() => console.log("clicked")}>
-                Magnetic button
-              </Button>
-            </Page>
-            {/* <Cursor hover={isHovered} /> */}
-          </ThemeProvider>
         </div>
       </div>
     </div>

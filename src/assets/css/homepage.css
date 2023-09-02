@@ -85,7 +85,7 @@
   font-size:1em;
   color: rgb(20, 18, 18);
 }
-#outer-cntr-btn{
+/* #outer-cntr-btn{
   width: 100%;  
   padding-right: 10%;
 }
@@ -95,14 +95,14 @@
   justify-content: center;
   height: 140px;
   width: 140px;
-  float: right;
+  float: right; */
 
   /* padding: 50px; */
-  background-color: rgb(44, 44, 44);
+  /* background-color: rgb(44, 44, 44);
   color: rgb(255, 255, 255);
   font-weight: 500;
   border-radius: 50%;
-}
+} */
 @media (max-width: 768px) {
   .content-container{
     flex-direction: column;
