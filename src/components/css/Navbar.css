@@ -3,18 +3,19 @@
   align-items: center;
   padding: 2vh 2vw;
   /* z-index: 1000000; */
+  justify-content: space-between;
   background-color: transparent;
   color:white;
   
   }
   .nav_left{
   font-size: 2em;
-  flex-basis: 30%;
+  /* flex-basis: 30%; */
   font-weight: bold;
   }
   .nav_right{
   display: flex;
-  flex-basis: 70%;
+  /* flex-basis: 70%; */
   justify-content: right;
   padding: 2vh 1vw;
   

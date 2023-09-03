@@ -19,7 +19,9 @@ import "../components/css/homepage.css";
 import Marquee from "react-fast-marquee";
 import Navbar from "../components/Navbar";
 import FramerMagnetic from '../utils/framermagnetic';
-
+import Lottie from "lottie-react";
+import globe from "../assets/lottie/globe.json";
+import { Height } from "@mui/icons-material";
 const Page = styled.div`
   display: flex;
   flex-direction: column;
@@ -70,7 +72,22 @@ const Homepage = () => {
     <div>
       <section className="section1">
         <div id="home">
-        
+          {/* container w-screen h-2 */}
+
+          <div className="hero-mid ">
+            <div id="left-mid">
+              <h1>
+                Located In Bhilai
+              </h1>
+              <div id="circle">
+                <Lottie animationData={globe} loop={true} style={{ height: 100, width: "fit-content" }} />
+              </div>
+            </div>
+            <div id="right-mid">
+              <p>Freelance</p>
+              <p>Designer & Developer</p>
+            </div>
+          </div>
 
           <Marquee style={{ fontSize: "25rem", color: "white", position: "relative", top: "30vh", opacity: "50%", letterSpacing: "10px" }} direction={scrollDirection}>Recog </Marquee>
         </div>
