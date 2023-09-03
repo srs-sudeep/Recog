@@ -5,9 +5,16 @@ import { lightTheme } from "../theme/theme";
 import useHover from "../utils/useHover";
 import GlobalStyles from "../theme/global";
 import Cursor from "../components/Cursor";
-import Badge from "../components/Button";
+import Badge from "../components/Badge";
 import Button from "../components/Button";
-import "../assets/css/homepage.css";
+
+import EmblaCarousel from "../components/EmblaCarousel";
+import "../components/css/base.css";
+import "../components/css/sandbox.css";
+import "../components/css/embla.css";
+
+import "../components/css/homepage.css";
+
 // import { Card, Testimonial } from "../components";
 // import { motion } from "framer-motion";
 // import CountUp from "react-countup";
@@ -129,6 +136,11 @@ const Header = styled.div`
     justify-content: space-between;
   }
 `;
+
+const OPTIONS = { dragFree: true, loop: true };
+const SLIDE_COUNT = 5;
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+
 const Homepage = () => {
   // const box1Ref = useRef(null);
   // const { scrollRef, next, prev } = useSnapCarousel();
@@ -156,17 +168,23 @@ const Homepage = () => {
   //   fetchData();
   // }, []);
   const [hoverRef, isHovered] = useHover();
+
   return (
     <div>
       <div className="About-section">
         <div className="content-container">
           <div id="about-c-1" className="sAbout-content">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-            iure. Lorem ipsum dolor sit amet.{" "}
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+              iure. Lorem ipsum dolor sit amet.
+            </div>
           </div>
           <div id="about-c-2" className="About-content">
             <div>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
+              voluptas!
+            </div>
+            <div id="btn-container">
               <ThemeProvider theme={lightTheme}>
                 <Normalize />
                 <GlobalStyles />
@@ -177,13 +195,22 @@ const Homepage = () => {
                 </Page>
               </ThemeProvider>
             </div>
-            <div>
-              {" "}
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
-              voluptas!
-            </div>
           </div>
         </div>
+        <div></div>
+      </div>
+
+      <div>
+        <main className="sandbox">
+          <section className="sandbox__carousel">
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          </section>
+        </main>
+        <main className="sandbox">
+          <section className="sandbox__carousel">
+            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+          </section>
+        </main>
       </div>
     </div>
   );
