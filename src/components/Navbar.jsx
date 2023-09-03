@@ -2,61 +2,36 @@ import React, { useEffect, useState } from "react";
 import { ReactDOM } from "react";
 import "./css/Navbar.css";
 import { logonav } from "../assets";
-// import Marquee from 'react-double-marquee';
-import Marquee from "react-fast-marquee";
-
-const SCROLL_UP = "right";
-const SCROLL_DOWN = "left";
-
-const useScrollDirection = () => {
-  const [scrollDirection, setScrollDirection] = useState(SCROLL_UP);
-  const [prevScrollY, setPrevScrollY] = useState(0);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      if (currentScrollY > prevScrollY) {
-        setScrollDirection(SCROLL_DOWN);
-      } else if (currentScrollY < prevScrollY) {
-        setScrollDirection(SCROLL_UP);
-      }
-
-      setPrevScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [prevScrollY]);
-
-  return scrollDirection;
-};
+import FramerMagnetic from '../utils/framermagnetic';
 
 const Navbar = () => {
+
   return (
-    <div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.0.5/gsap.min.js"></script>
-      <nav className="navbar">
-        <div className="nav_left">
-          <div className="logo">
-            Recog
-          </div>
+    <nav className="navbar">
+      <div className="nav_left">
+        <div className="logo">
+          <FramerMagnetic>
+          Recog
+          </FramerMagnetic>
         </div>
-        <div className="nav_right">
-          <ul>
+      </div>
+      <div className="nav_right">
+        <ul>
+          <FramerMagnetic>
             <li>Home</li>
-            <li>About</li>
-            <li>Contact Us</li>
-          </ul>
-        </div>
-      </nav>
-      {/* <Marquee style="speed : 1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, autem?</Marquee> */}
-      <Marquee style={{fontSize : "100px"}} direction={useScrollDirection}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, cumque?</Marquee>
-    
-    </div>
+          </FramerMagnetic>
+          <FramerMagnetic>
+          <li>About</li>
+          </FramerMagnetic>
+          <FramerMagnetic>
+          <li>Contact Us</li>
+          </FramerMagnetic>
+        </ul>
+      </div>
+    </nav>
+
+
+
   );
 
 };

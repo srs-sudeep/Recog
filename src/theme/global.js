@@ -1,27 +1,27 @@
 import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-  }
+  // *,
+  // *::before,
+  // *::after {
+  //   box-sizing: border-box;
+  // }
 
-  html {
-    height: -webkit-fill-available;
-  }
+  // html {
+  //   height: -webkit-fill-available;
+  // }
 
-  #root,
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    min-height: -webkit-fill-available; /* mobile viewport bug fix */
-    height: 100%;
-    width: 100%;
-  }
+  // #root,
+  // body {
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  //   min-height: 100vh;
+  //   min-height: -webkit-fill-available; /* mobile viewport bug fix */
+  //   height: 100%;
+  //   width: 100%;
+  // }
 
   body {
     -webkit-font-smoothing: antialiased;
