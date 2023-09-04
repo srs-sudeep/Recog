@@ -22,6 +22,7 @@ import FramerMagnetic from '../utils/framermagnetic';
 import Lottie from "lottie-react";
 import globe from "../assets/lottie/globe.json";
 import { Height } from "@mui/icons-material";
+import { background } from "@chakra-ui/react";
 const Page = styled.div`
   display: flex;
   flex-direction: column;
@@ -89,9 +90,10 @@ const Homepage = () => {
             </div>
           </div>
 
-          <Marquee style={{ fontSize: "25rem", color: "white", position: "relative", top: "30vh", opacity: "50%", letterSpacing: "10px" }} direction={scrollDirection}>Recog </Marquee>
+          <Marquee style={{ fontSize: "25rem", color: "white", position: "relative", top: "27vh", opacity: "50%", letterSpacing: "10px" }} direction={scrollDirection}>Recog </Marquee>
         </div>
       </section>
+      <div style={{ backgroundColor: 'white' }}>
       <section className="About-section">
         <div className="container mx-auto px-4 flex flex-column">
           <div id="about-c-1" className="leftcontainer">
@@ -100,10 +102,13 @@ const Homepage = () => {
             iure. Lorem ipsum dolor sit amet.{" "}
           </div>
           <div id="about-c-2" className="rightcontainer">
+            <div className="bottomrightcontainer">
+              {" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+              iure. Lorem ipsum dolor sit amet.{" "}
+            </div>
             <div className="container">
               <ThemeProvider theme={lightTheme}>
-                {/* <Normalize /> */}
-                {/* <GlobalStyles /> */}
                 <Page>
 
                   <FramerMagnetic>
@@ -114,16 +119,11 @@ const Homepage = () => {
                 </Page>
               </ThemeProvider>
             </div>
-            <div className="bottomrightcontainer">
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              iure. Lorem ipsum dolor sit amet.{" "}
-            </div>
           </div>
         </div>
 
       </section>
-      <div>
+      <section className="sec-carousel">
         <main className="sandbox">
           <section className="sandbox__carousel">
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
@@ -134,8 +134,8 @@ const Homepage = () => {
             <EmblaCarousel slides={SLIDES} options={OPTIONS} />
           </section>
         </main>
+      </section>
       </div>
-      
       {/* <section className="section2">
 
         <div className="About-section">

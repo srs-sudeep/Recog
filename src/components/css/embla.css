@@ -1,7 +1,7 @@
 .embla {
-  --slide-spacing: 4.5rem;
+  --slide-spacing: 2.5rem;
   --slide-size: 30%;
-  --slide-height: 30rem;
+  --slide-height: 19rem;
   padding: 1.6rem;
   background-color: white;
   }
@@ -27,7 +27,7 @@
     border-bottom: 34px solid #d9d9d9;
     display: block;
     height: var(--slide-height);
-    width: 100%;
+    width: 23rem;
     object-fit: cover;
   }
   .embla__slide__number {
