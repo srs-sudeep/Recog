@@ -10,11 +10,11 @@ import Badge from "../components/Badge";
 import Button from "../components/Button";
 
 import EmblaCarousel from "../components/EmblaCarousel";
-import "../components/css/base.css";
+// import "../components/css/base.css";
 import "../components/css/sandbox.css";
 import "../components/css/embla.css";
 
-import "../components/css/homepage.css";
+import "../assets/css/homepage.css";
 
 import Marquee from "react-fast-marquee";
 import Navbar from "../components/Navbar";
