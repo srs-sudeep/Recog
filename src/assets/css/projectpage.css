@@ -1,0 +1,45 @@
+.title{
+    display:flex;
+    justify-content: space-between;
+    padding: 64px 11%;
+    padding-top:20px;
+}
+#project-title{
+    display:inline-block;
+    font-family: 'Dennis Sans', sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 8vw;
+    line-height: 1.065;
+}
+#live-site{
+    height:10px;
+    position:relative;
+}
+.video-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#project-video{
+    height: 80vh;
+    width: 80vw;
+    padding:1%;
+}
+.Highlight-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 15vw;
+    background-color: rgb(255 255 255);
+}
+#highlight-title{
+    color:rgb(42, 42, 42);
+    padding:10px 0px;
+    font-weight: 100;
+    font-size: 4vw;
+}
+#carousel-box{
+    height: 39.4vw;
+    width:70vw;
+}
