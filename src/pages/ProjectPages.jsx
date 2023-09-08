@@ -27,8 +27,6 @@ function ProjectPage() {
   const { id } = useParams();
   const [projectsPage, setProjectsPage] = useState(null);
   const [hoverRef, isHovered] = useHover();
-  
-
 
   useEffect(() => {
     // Find the article with the matching id
@@ -42,30 +40,41 @@ function ProjectPage() {
     return <div>Loading...</div>;
   }
 
-  const slide_pages = [projectsPage.slide1,projectsPage.slide2,projectsPage.slide3,projectsPage.slide4,projectsPage.slide5,];
-  
+  const slide_pages = [
+    projectsPage.slide1,
+    projectsPage.slide2,
+    projectsPage.slide3,
+    projectsPage.slide4,
+    projectsPage.slide5,
+  ];
+
   return (
     <div>
-      <section className="title">
-        <h2 id="project-title">{projectsPage.title}</h2>
-        <div id="live-site">
-          <ThemeProvider theme={lightTheme}>
-            <Page>
-              <FramerMagnetic>
-                <Button ref={hoverRef} onClick={() => console.log("clicked")}>
-                  Visit Website
-                </Button>
-              </FramerMagnetic>
-            </Page>
-          </ThemeProvider>
-        </div>
-      </section>
-      <section className="video-container">
-        <div id="project-video">
-          <video width="750" height="500" controls>
-            <source src="..videos/teaser.mp4" type="video/mp4" />
-          </video>
-        </div>
+      <section className="header">
+        <section className="title">
+          <h2 id="project-title">{projectsPage.title}</h2>
+          <div id="live-site">
+            <ThemeProvider theme={lightTheme}>
+              <Page>
+                <FramerMagnetic>
+                  <Button ref={hoverRef} onClick={() => console.log("clicked")}>
+                    Visit Website
+                  </Button>
+                </FramerMagnetic>
+              </Page>
+            </ThemeProvider>
+          </div>
+        </section>
+        <section className="video-container">
+          <div id="project-video">
+            <video width="100%" height="auto" controls>
+              <source src={projectsPage.videoURL} type="video/mp4" />
+            </video>
+          </div>
+        </section>
+        {/* <section className="text">
+          Scroll to Explore more...
+        </section> */}
       </section>
 
       <section className="Highlight-container">
@@ -73,7 +82,11 @@ function ProjectPage() {
           <h2 id="highlight-title">KEY FEATURES</h2>
           <div id="carousel-box">
             <section className="sandbox__carousel">
-              <FeaturesCarousel pages={slide_pages} slides={SLIDES} options={OPTIONS} />
+              <FeaturesCarousel
+                pages={slide_pages}
+                slides={SLIDES}
+                options={OPTIONS}
+              />
             </section>
           </div>
         </main>

@@ -16,6 +16,18 @@
     flex-wrap: wrap;
 }
 
+@media (max-width: 640px){
+  .intro-title{
+    font-size: 3rem;
+  }
+  #project-items{
+    padding: 9rem 8vw;
+  }
+  .card{
+    width:80vw;
+    height:80vw;
+  }
+}
 /* .repo-cards {
   display: flex;
   flex-wrap: wrap;
