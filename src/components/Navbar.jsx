@@ -4,12 +4,12 @@ import "./css/Navbar.css";
 import { logonav } from "../assets";
 import FramerMagnetic from '../utils/framermagnetic';
 import "react-hamburger-menus/dist/style.css";
-import { ResponsiveNavbar } from "react-hamburger-menus";
 import { GhostNavbar } from "react-hamburger-menus";
 // import "react-hamburger-menus/dist/style.css";
 import { Zoom } from "react-awesome-reveal";
 import { isVisible } from "@testing-library/user-event/dist/utils";
 import FadeInOut from "../utils/FadeInOut";
+import { faBlackboard } from "@fortawesome/free-solid-svg-icons";
 // import { motion } from "framer-motion"
 
 const Navbar = () => {
@@ -61,33 +61,36 @@ const Navbar = () => {
     // const visi = UseScrollDirection();
     <div>
       <div className="mobile">
-      <FadeInOut show={true} duration={500} >
-            <GhostNavbar />
-          </FadeInOut>
+        <FadeInOut show={true} duration={500} >
+          <GhostNavbar />
+        </FadeInOut>
       </div>
       <div className="non-mobile">
-        {/* <FramerMagnetic> */}
+        {/* <FramerMagnetic styles={{zIndex : "99999998"}}> */}
         <div id="ghostbar">
           <FadeInOut show={visi} duration={500}>
             <GhostNavbar
               styles={{
-                fontColor:"#fff",
+                fontColor: "#fff",
                 fontHoverColor: "black",
                 floatButtonSize: 0.9,
                 floatButtonX: 6,
-                floatButtonY: 15
+                floatButtonY: 15,
+                fontHoverColor : "black",
+                navigationBackground: {backgroundColor: "black"}
+                // fontColor : {"black"}
               }}
             >
               <ul>
+                <li>HOME</li>
                 <li>ABOUT</li>
-                <li>PROJECTS</li>
-                <li>ELEMENTS</li>
-                <li>CONTACT</li>
+                <li>CONTACT US</li>
+                {/* <li>CONTACT</li> */}
               </ul>
             </GhostNavbar>
           </FadeInOut>
         </div>
-        {/* </FramerMagnetic> */}
+        {/* </FramerMagnetic > */}
         {visi}
         <nav className="navbar" >
           <div className="nav_left">
@@ -106,6 +109,11 @@ const Navbar = () => {
               </FramerMagnetic>
               <FramerMagnetic>
                 <li><a onClick={() => scrollToSection('about')}>About</a>
+                  <div class="underline"></div>
+                </li>
+              </FramerMagnetic>
+              <FramerMagnetic>
+                <li><a href="./projects">Work</a>
                   <div class="underline"></div>
                 </li>
               </FramerMagnetic>

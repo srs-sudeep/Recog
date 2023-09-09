@@ -99,14 +99,12 @@ const Homepage = () => {
           <div className="container mx-auto px-4 flex flex-column">
             <div id="about-c-1" className="leftcontainer">
               {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              iure. Lorem ipsum dolor sit amet.{" "}
+              <strong>RecogX</strong> is an agile development startup committed to bringing your digital dreams to life. With a team of talented developers and a passion for innovation, we specialize in creating custom web and mobile applications that solve your unique challenges. We pride ourselves on efficiency, transparency, and delivering top-notch results within budget and on schedule.{" "}
             </div>
             <div id="about-c-2" className="rightcontainer">
               <div className="bottomrightcontainer">
                 {" "}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-                iure. Lorem ipsum dolor sit amet.{" "}
+                Let us be your trusted partner in turning your ideas into reality. Contact us today to embark on a development journey that drives your business forward.{" "}
               </div>
               <div className="container">
                 <ThemeProvider theme={lightTheme}>
