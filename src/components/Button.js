@@ -149,7 +149,7 @@ const Button = forwardRef((props, ref) => {
   }, [mouseX, mouseY, ref, textRef, fillControls]);
 
   return (
-    <Style ref={ref} href={props.href}>
+    <Style ref={ref} href={props.href} style={props.shape}>
       <span ref={textRef}>
         <Text data-text={props.children}>{props.children}</Text>
       </span>
