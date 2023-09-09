@@ -1,0 +1,91 @@
+.header{
+    height:104vh;
+}
+.title{
+    display:flex;
+    justify-content: space-between;
+    padding: 30px 11%;
+    padding-top:20px;
+}
+#project-title{
+    display:inline-block;
+    font-family: 'Dennis Sans', sans-serif;
+    font-weight: 450;
+    font-style: normal;
+    font-size: 7vw;
+    line-height: 1.065;
+}
+#live-site{
+    height:10px;
+    position:relative;
+}
+.video-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:70vw;
+    padding-left:11vw;
+}
+#project-video{
+    height: 80vh;
+    width: 54vw;
+}
+.text{
+    position: absolute;
+    bottom: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+.Highlight-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 15vw;
+    background-color: rgb(255 255 255);
+}
+#highlight-title{
+    color:rgb(42, 42, 42);
+    padding:10px 0px;
+    font-weight: 100;
+    font-size: 4vw;
+}
+#carousel-box{
+    height: 39.4vw;
+    width:70vw;
+}
+
+@media (max-width:900px){
+    .title{
+        flex-direction:column;
+        padding: 6vh 9%;
+        padding-bottom: 3vh;
+    }
+    #project-title{
+        font-size: 10vw;
+        padding-bottom: 8vh;
+    }
+    #live-site{
+        height:auto;
+        position:static;
+        display: flex;
+        justify-content: end;
+    }
+    #project-video{
+        height: auto;
+        width: 98vw;
+        padding:1%;
+    }
+    .video-container{
+        width: 100vw;
+        padding-left: 0px;
+    }
+    .Highlight-container{
+        padding: 5rem 8vw;
+    }
+    #carousel-box {
+        height: 47.2vw;
+        width: 84vw;
+    }
+}

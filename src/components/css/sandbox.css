@@ -1,5 +1,6 @@
 .sandbox {
     width: 100%;
+
     padding: 22px 0px;
   }
   @media (min-width: 750px) {
@@ -12,6 +13,7 @@
   .sandbox__carousel {
     position: relative;
     background-color: var(--background-code);
+    height: 100%;
   }
   @media (max-width: 749px) {
     .sandbox__carousel {

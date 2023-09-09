@@ -1,4 +1,41 @@
+.card-container {
+  display: inline-block;
+}
+
+.card-container:hover {
+
+}
+
 .card {
+  /* background-image: url("https://www.springboard.com/blog/wp-content/uploads/2022/04/saas-dashboard-1.png"); */
+  display: flex;
+  background-color: #11545abe;
+  height: 500px;
+  width: 500px;
+  justify-content: center;
+  align-items: center;
+  padding: 110px 55px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 500px;
+  height: 250px; */
+}
+
+.project-title {
+  color: rgb(53, 53, 53);
+  padding: 21px 6px 20px 0px;
+  font-size: 2rem;
+}
+
+.hr {
+  border: 1px solid #808080;
+}
+
+/* .card {
   width: 20vw;
   height: 35vh;
   perspective: 1000px;
@@ -10,7 +47,6 @@
 
 .card-inner{
     display: flex;
-    /* gap: 2rem; */
 }
 
 .even-card .card-front,
@@ -93,7 +129,6 @@
   font-weight: 500;
   letter-spacing: 0;
   line-height: 23.7px;
-  /* white-space: nowrap; */
 }
 .card-icon {
   font-size: 1.25rem;
@@ -146,4 +181,4 @@
   .card-description{
     font-size: 0.9rem;
   }
-}
+} */
