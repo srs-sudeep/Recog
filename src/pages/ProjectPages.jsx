@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import styled, { ThemeProvider } from "styled-components";
 import useHover from "../utils/useHover";
@@ -10,6 +10,7 @@ import FeaturesCarousel from "../components/FeaturesCarousel";
 import "../assets/css/projectpage.css";
 import "../components/css/sandbox.css";
 import "../components/css/emblaV2.css";
+import { Link } from "react-router-dom";
 
 const Page = styled.div`
   display: flex;
@@ -47,7 +48,7 @@ function ProjectPage() {
     projectsPage.slide4,
     projectsPage.slide5,
   ];
-
+  // const video = projectsPage.videoURL;
   return (
     <div>
       <section className="header">
@@ -57,9 +58,21 @@ function ProjectPage() {
             <ThemeProvider theme={lightTheme}>
               <Page>
                 <FramerMagnetic>
-                  <Button ref={hoverRef} onClick={() => console.log("clicked")}>
-                    Visit Website
-                  </Button>
+                  <Link to={`/projects/${projectsPage.id}`}>
+                    <Button
+                      shape={{
+                        fontSize: "1.5vw",
+                        backgroundColor: "#455ce9",
+                        borderRadius: "200px",
+                        width: "19vw",
+                        margin: "0px",
+                        height: "6.6vw",
+                      }}
+                      ref={hoverRef}
+                    >
+                      Visit Website
+                    </Button>
+                  </Link>
                 </FramerMagnetic>
               </Page>
             </ThemeProvider>
@@ -67,16 +80,23 @@ function ProjectPage() {
         </section>
         <section className="video-container">
           <div id="project-video">
-            <video width="100%" height="auto" controls>
-              <source src={projectsPage.videoURL} type="video/mp4" />
-            </video>
+            <div className="youtube-container">
+              <iframe
+                width="100%"
+                height="100%"
+                src={
+                  projectsPage.videoURL +
+                  "&autoplay=1&rel=0&modestbranding=1&controls=0&loop=1&mute=1"
+                }
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
           </div>
         </section>
-        {/* <section className="text">
-          Scroll to Explore more...
-        </section> */}
       </section>
-
       <section className="Highlight-container">
         <main className="sandbox">
           <h2 id="highlight-title">KEY FEATURES</h2>
