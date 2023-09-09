@@ -21,13 +21,13 @@
     position: relative;
   }
   .embla__slide__img {
-    border-left: 20px solid #d9d9d9;
-    border-right: 20px solid #d9d9d9;
-    border-top: 34px solid #d9d9d9;
-    border-bottom: 34px solid #d9d9d9;
+    border-left: 2vw solid #d9d9d9;
+    border-right: 2vw solid #d9d9d9;
+    border-top: 2.5vw solid #d9d9d9;
+    border-bottom: 2.5vw solid #d9d9d9;
     display: block;
-    height: var(--slide-height);
-    width: 23rem;
+    height: 18vw;
+    width: 24vw;
     object-fit: cover;
   }
   .embla__slide__number {
@@ -62,4 +62,13 @@
     right: 0;
     bottom: 0;
   }
-  
+  @media (max-width:821px){
+    .embla {
+      --slide-size: 100%;
+      }
+      .embla__slide__img {
+        
+        height: auto;
+        width: 100vw;
+      }
+  }

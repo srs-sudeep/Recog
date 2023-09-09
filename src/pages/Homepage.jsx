@@ -8,8 +8,9 @@ import GlobalStyles from "../theme/global";
 import Cursor from "../components/Cursor";
 import Badge from "../components/Badge";
 import Button from "../components/Button";
-
+import projectItems from "./projectItems";
 import EmblaCarousel from "../components/EmblaCarousel";
+import EmblaCarousel2 from "../components/EmblaCarousel2";
 // import "../components/css/base.css";
 import "../components/css/sandbox.css";
 import "../components/css/embla.css";
@@ -18,7 +19,7 @@ import "../assets/css/homepage.css";
 
 import Marquee from "react-fast-marquee";
 import Navbar from "../components/Navbar";
-import FramerMagnetic from '../utils/framermagnetic';
+import FramerMagnetic from "../utils/framermagnetic";
 import Lottie from "lottie-react";
 import globe from "../assets/lottie/globe.json";
 import { Height } from "@mui/icons-material";
@@ -51,10 +52,10 @@ const UseScrollDirection = () => {
       setPrevScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollY]);
 
@@ -77,11 +78,13 @@ const Homepage = () => {
 
           <div className="hero-mid ">
             <div id="left-mid">
-              <h1>
-                Located In Bhilai
-              </h1>
+              <h1>Located In Bhilai</h1>
               <div id="circle">
-                <Lottie animationData={globe} loop={true} style={{ height: 100, width: "fit-content" }} />
+                <Lottie
+                  animationData={globe}
+                  loop={true}
+                  style={{ height: 100, width: "fit-content" }}
+                />
               </div>
             </div>
             <div id="right-mid">
@@ -94,9 +97,9 @@ const Homepage = () => {
           </div>
         </div>
       </section>
-      <div style={{ backgroundColor: 'white' }}>
-        <section className="About-section" id="about">
-          <div className="container mx-auto px-4 flex flex-column">
+      <div style={{ backgroundColor: "white" }}>
+        <section className="about-section" id="about">
+          <div className="about-container mx-auto px-4 flex flex-column">
             <div id="about-c-1" className="leftcontainer">
               {" "}
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
@@ -108,12 +111,14 @@ const Homepage = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
                 iure. Lorem ipsum dolor sit amet.{" "}
               </div>
-              <div className="container">
+              <div className="btn-container">
                 <ThemeProvider theme={lightTheme}>
                   <Page>
-
                     <FramerMagnetic>
-                      <Button ref={hoverRef} onClick={() => console.log("clicked")}>
+                      <Button
+                        ref={hoverRef}
+                        onClick={() => console.log("clicked")}
+                      >
                         About us
                       </Button>
                     </FramerMagnetic>
@@ -122,51 +127,24 @@ const Homepage = () => {
               </div>
             </div>
           </div>
-
         </section>
-        <section className="sec-carousel">
-          <main className="sandbox">
-            <section className="sandbox__carousel">
-              <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-            </section>
-          </main>
-          <main className="sandbox">
-            <section className="sandbox__carousel">
-              <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-            </section>
-          </main>
+        <section className="section-carousel">
+          <div>
+            <main className="sandbox">
+              <section className="sandbox__carousel">
+                <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+              </section>
+            </main>
+          </div>
+          <div>
+            <main className="sandbox">
+              <section className="sandbox__carousel">
+                <EmblaCarousel2 slides={SLIDES} options={OPTIONS} />
+              </section>
+            </main>
+          </div>
         </section>
       </div>
-      {/* <section className="section2">
-
-        <div className="About-section">
-          <div className="content-container">
-            <div id="about-c-1" className="sAbout-content">
-              {" "}
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-              iure. Lorem ipsum dolor sit amet.{" "}
-            </div>
-            <div id="about-c-2" className="About-content">
-              <div>
-                <ThemeProvider theme={lightTheme}>
-                  <Normalize />
-                  <GlobalStyles />
-                  <Page>
-                    <Button ref={hoverRef} onClick={() => console.log("clicked")}>
-                      About us
-                    </Button>
-                  </Page>
-                </ThemeProvider>
-              </div>
-              <div>
-                {" "}
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea,
-                voluptas!
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };

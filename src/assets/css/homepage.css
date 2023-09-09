@@ -15,20 +15,22 @@
    background-size: cover;
  }
 
- .About-section {
+ .about-section {
    background-color: aliceblue;
    display: flex;
    align-items: center;
    justify-content: center;
-   padding: 64px 0px;
+   padding: 20vh 11vw;
    flex-direction: column;
-   height: 100vh;
+   height: 120vh;
  }
 
- .container {
+ .about-container {
    display: flex;
    justify-content: space-between;
-   height: 47vh;
+
+   align-items: start;
+   height: 65vh;
  }
 
  .About-content {
@@ -37,14 +39,22 @@
 
  #about-c-1 {
    width: 55%;
-   font-size: 1.85em;
+   font-size: 2.55vw;
    color: rgb(27, 25, 25);
  }
 
  #about-c-2 {
    width: 30%;
-   font-size: 1.22em;
+   font-size: 1.22vw;
    color: rgb(20, 18, 18);
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ .bottomrightcontainer {
+   font-size: 1.62vw;
  }
 
  .hero-mid {
@@ -83,10 +93,20 @@
    position: relative;
    top: 27vh;
    opacity: 50%;
-   letter-spacing :10px;
+   letter-spacing: 10px;
  }
-
- @media only screen and (max-width : 720px) {
+.section-carousel{
+  height:120vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carousel2{
+  /* position: relative;
+    left: -200px; */
+}
+ @media only screen and (max-width : 821px) {
    #home {
      display: flex;
      flex-direction: column-reverse;
@@ -95,28 +115,43 @@
    #marquee-fsize {
      font-size: 5rem;
      top: -42vh;
-     letter-spacing :15px;
+     letter-spacing: 15px;
    }
-   .hero-mid {
-    display: flex;
-    font-size: 1rem;
-    top: -32vh;
-  }
 
-  .container{
+   .hero-mid {
+     display: flex;
+     font-size: 1rem;
+     top: -32vh;
+   }
+
+   .container {
+     flex-direction: column;
+     height: 50vh;
+     gap: 6vh;
+   }
+   .about-section{
+    /* height: 100vh; */
+   }
+   .about-container {
+   text-align: justify;
     flex-direction: column;
-    height: 50vh;
-    gap: 6vh;
+
   }
-  #about-c-1{
+   #about-c-1 {
+     width: 100%;
+     padding: 11vw 0px;
+    font-size: 6vw;
+   }
+
+   #about-c-2 {
     width: 100%;
-    font-size: 2em;
-    
-  }
-  #about-c-2{
-    width: 100%;
-  }
-  .bottomrightcontainer{
-    font-size: 1.3em;
-  }
+    font-size: 0.9em;
+   }
+
+   .bottomrightcontainer {
+     font-size: 4vw;
+   }
+   .btn-container{
+    padding:11vw 0px;
+   }
  }
