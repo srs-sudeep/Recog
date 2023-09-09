@@ -89,52 +89,53 @@ const Homepage = () => {
               <p>Designer & Developer</p>
             </div>
           </div>
-
-          <Marquee style={{ fontSize: "25rem", color: "white", position: "relative", top: "27vh", opacity: "50%", letterSpacing: "10px" }} direction={scrollDirection}>Recog </Marquee>
+          <div id="marquee-fsize">
+            <Marquee direction={scrollDirection}>RecogX </Marquee>
+          </div>
         </div>
       </section>
       <div style={{ backgroundColor: 'white' }}>
-      <section className="About-section">
-        <div className="container mx-auto px-4 flex flex-column">
-          <div id="about-c-1" className="leftcontainer">
-            {" "}
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
-            iure. Lorem ipsum dolor sit amet.{" "}
-          </div>
-          <div id="about-c-2" className="rightcontainer">
-            <div className="bottomrightcontainer">
+        <section className="About-section" id="about">
+          <div className="container mx-auto px-4 flex flex-column">
+            <div id="about-c-1" className="leftcontainer">
               {" "}
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
               iure. Lorem ipsum dolor sit amet.{" "}
             </div>
-            <div className="container">
-              <ThemeProvider theme={lightTheme}>
-                <Page>
+            <div id="about-c-2" className="rightcontainer">
+              <div className="bottomrightcontainer">
+                {" "}
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae,
+                iure. Lorem ipsum dolor sit amet.{" "}
+              </div>
+              <div className="container">
+                <ThemeProvider theme={lightTheme}>
+                  <Page>
 
-                  <FramerMagnetic>
-                    <Button ref={hoverRef} onClick={() => console.log("clicked")}>
-                      About us
-                    </Button>
-                  </FramerMagnetic>
-                </Page>
-              </ThemeProvider>
+                    <FramerMagnetic>
+                      <Button ref={hoverRef} onClick={() => console.log("clicked")}>
+                        About us
+                      </Button>
+                    </FramerMagnetic>
+                  </Page>
+                </ThemeProvider>
+              </div>
             </div>
           </div>
-        </div>
 
-      </section>
-      <section className="sec-carousel">
-        <main className="sandbox">
-          <section className="sandbox__carousel">
-            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-          </section>
-        </main>
-        <main className="sandbox">
-          <section className="sandbox__carousel">
-            <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-          </section>
-        </main>
-      </section>
+        </section>
+        <section className="sec-carousel">
+          <main className="sandbox">
+            <section className="sandbox__carousel">
+              <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+            </section>
+          </main>
+          <main className="sandbox">
+            <section className="sandbox__carousel">
+              <EmblaCarousel slides={SLIDES} options={OPTIONS} />
+            </section>
+          </main>
+        </section>
       </div>
       {/* <section className="section2">
 

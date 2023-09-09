@@ -1,39 +1,120 @@
-.navbar{
+.fade-in-animation {
+  opacity: 0;
+  /* Start with an opacity of 0 to make the element invisible */
+  animation: fadeIn 1.2s ease forwards;
+  /* Apply a fade-in animation */
+}
+
+.fade-out-animation {
+  opacity: 1;
+  /* Start with an opacity of 0 to make the element invisible */
+  animation: fadeOut 1.2s ease forwards;
+  /* Apply a fade-in animation */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+    /* Increase opacity to 1 to fade in the element */
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    /* Increase opacity to 1 to fade in the element */
+  }
+}
+
+/* .logo span{
+  font-size: 60px;
+} */
+.navbar {
   display: flex;
   align-items: center;
   padding: 2vh 2vw;
   /* z-index: 1000000; */
   justify-content: space-between;
   background-color: transparent;
-  color:white;
-  
-  }
-  .nav_left{
+  color: white;
+  scroll-behavior: smooth;
+
+}
+
+.nav_left {
   font-size: 2em;
   /* flex-basis: 30%; */
   font-weight: bold;
-  }
-  .nav_right{
+}
+
+.nav_right {
   display: flex;
   /* flex-basis: 70%; */
   justify-content: right;
   padding: 2vh 1vw;
-  
-  }
-  .nav_right ul{
+
+}
+
+.nav_right ul {
   display: flex;
   gap: 2.5vw;
-  }
-  .nav_right ul li{
+}
+
+.nav_right ul li {
   font-size: 1.2rem;
   /* border-bottom: 1px solid #fff;
   border-radius: 1px;
   color: #8edafa;
   padding-bottom: 13px; */
-  }
-  .name-wrapper{
+}
+
+.name-wrapper {
   font-size: 100px;
+}
+
+li .underline {
+  height: 3px;
+  background-color: transparent;
+  width: 0%;
+  transition: width 0.2s, background-color 0.5s;
+  margin: 0 auto;
+}
+
+ul li:hover .underline {
+  background-color: white;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+
+}
+
+#ghostbar {
+  position: absolute;
+  top: 30px;
+  right: 100px;
+}
+
+.mobile {
+  display: none;
+}
+
+@media only screen and (max-width : 720px) {
+  .non-mobile {
+    display: none;
   }
-  
-  
-  
+
+  .mobile {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 100px;
+  }
+}
