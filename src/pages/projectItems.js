@@ -2,7 +2,7 @@ const projectItems = [
     {
         id:0,
         imgURL:"https://www.springboard.com/blog/wp-content/uploads/2022/04/saas-dashboard-1.png",
-        videoURL:"../src/pages/videos/Proximity.mp4",
+        videoURL:"https://www.youtube.com/embed/fEErySYqItI?si=9ZoskEo5CuR4xOJ6",
         title:"LOREM",
         slide1:"https://www.springboard.com/blog/wp-content/uploads/2022/04/saas-dashboard-1.png",
         slide2:"https://www.springboard.com/blog/wp-content/uploads/2022/04/saas-dashboard-1.png",
@@ -13,7 +13,7 @@ const projectItems = [
     {
         id:1,
         imgURL:"https://www.springboard.com/blog/wp-content/uploads/2022/04/saas-dashboard-1.png",
-        videoURL:"../src/assets/videos/Proximity.mp4",
+        videoURL:"https://www.youtube.com/embed/SVB66nWk9dQ?si=etdV4GUa6y9pbFth",
         title:"LOREMT",
         slide1:"https://www.springboard.com/blog/wp-content/uploads/2022/04/saas-dashboard-1.png",
         slide2:"https://www.springboard.com/blog/wp-content/uploads/2022/04/saas-dashboard-1.png",

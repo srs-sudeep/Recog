@@ -27,7 +27,7 @@
     padding-left:11vw;
 }
 #project-video{
-    height: 80vh;
+    height: 30.275vw;
     width: 54vw;
 }
 .text{
@@ -56,6 +56,13 @@
     width:70vw;
 }
 
+.youtube-container {
+    
+    pointer-events: none;
+    width:100%;
+    height:100%;
+}
+
 @media (max-width:900px){
     .title{
         flex-direction:column;
@@ -73,7 +80,7 @@
         justify-content: end;
     }
     #project-video{
-        height: auto;
+        height: 55vw;
         width: 98vw;
         padding:1%;
     }
