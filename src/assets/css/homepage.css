@@ -22,15 +22,12 @@
    justify-content: center;
    padding: 20vh 11vw;
    flex-direction: column;
-   height: 120vh;
  }
 
  .about-container {
    display: flex;
    justify-content: space-between;
-
    align-items: start;
-   height: 65vh;
  }
 
  .About-content {
@@ -72,7 +69,6 @@
 
  #left-mid h1 {
    padding-left: 2vw;
-   /* background-color: black; */
    display: inline-flex;
    align-items: center;
    font-size: 2rem;
@@ -95,17 +91,15 @@
    opacity: 50%;
    letter-spacing: 10px;
  }
-.section-carousel{
-  height:120vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.carousel2{
-  /* position: relative;
-    left: -200px; */
-}
+
+ .section-carousel {
+   height: 120vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+
  @media only screen and (max-width : 821px) {
    #home {
      display: flex;
@@ -129,29 +123,35 @@
      height: 50vh;
      gap: 6vh;
    }
-   .about-section{
-    /* height: 100vh; */
-   }
-   .about-container {
-   text-align: justify;
-    flex-direction: column;
 
-  }
+   .about-container {
+     text-align: justify;
+     flex-direction: column;
+   }
+
    #about-c-1 {
      width: 100%;
      padding: 11vw 0px;
-    font-size: 6vw;
+     font-size: 4vw;
    }
 
    #about-c-2 {
-    width: 100%;
-    font-size: 0.9em;
+     width: 100%;
+     font-size: 0.9em;
    }
 
    .bottomrightcontainer {
      font-size: 4vw;
    }
-   .btn-container{
-    padding:11vw 0px;
+
+   .btn-container {
+     padding: 11vw 0px;
    }
+   
+ }
+ @media only screen and (max-width : 720px)
+ {
+    #home{
+      height: 100vh;
+    }
  }

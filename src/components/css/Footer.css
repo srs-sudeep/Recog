@@ -113,12 +113,28 @@
     flex-direction: column;
   }
   
+  #footer-mid-1 {
+    font-size: 3rem;
+  }
+  
+  #footer-mid-2 {
+    font-size: 2rem;
+  }
 }
 @media only screen and (max-width: 400px){
   #footer-mid-3 {
     display: flex;
     flex-direction: column;
     align-items: end;
+  }
+
+
+  #footer-mid-1 {
+    font-size: 3rem;
+  }
+
+  #footer-mid-2 {
+    font-size: 2rem;
   }
   
 }

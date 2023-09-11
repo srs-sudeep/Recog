@@ -103,12 +103,12 @@ const Navbar = () => {
           <div className="nav_right">
             <ul>
               <FramerMagnetic>
-                <li><a onClick={() => scrollToSection('section1')}>Home</a>
+                <li><a href="./" onClick={() => scrollToSection('section1')}>Home</a>
                   <div class="underline"></div>
                 </li>
               </FramerMagnetic>
               <FramerMagnetic>
-                <li><a onClick={() => scrollToSection('about')}>About</a>
+                <li><a href="./#about" onClick={() => scrollToSection('about')}>About</a>
                   <div class="underline"></div>
                 </li>
               </FramerMagnetic>
