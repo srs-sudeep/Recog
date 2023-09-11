@@ -5,7 +5,7 @@ import useHover from "../utils/useHover";
 import Button from "../components/Button";
 import FramerMagnetic from "../utils/framermagnetic";
 import { lightTheme } from "../theme/theme";
-import projectItems from "./projectItems";
+import projectItems from "../constants/projectItems";
 import FeaturesCarousel from "../components/FeaturesCarousel";
 import "../assets/css/projectpage.css";
 import "../components/css/sandbox.css";

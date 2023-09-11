@@ -4,19 +4,13 @@ import styled, { ThemeProvider } from "styled-components";
 import { Normalize } from "styled-normalize";
 import { lightTheme } from "../theme/theme";
 import useHover from "../utils/useHover";
-import GlobalStyles from "../theme/global";
-import Cursor from "../components/Cursor";
-import Badge from "../components/Badge";
 import Button from "../components/Button";
-import projectItems from "./projectItems";
+import projectItems from "../constants/projectItems";
 import EmblaCarousel from "../components/EmblaCarousel";
 import EmblaCarousel2 from "../components/EmblaCarousel2";
-// import "../components/css/base.css";
 import "../components/css/sandbox.css";
 import "../components/css/embla.css";
-
 import "../assets/css/homepage.css";
-
 import Marquee from "react-fast-marquee";
 import Navbar from "../components/Navbar";
 import FramerMagnetic from "../utils/framermagnetic";

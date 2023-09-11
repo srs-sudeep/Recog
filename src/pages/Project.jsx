@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import "../assets/css/project.css";
-import projectItems from "./projectItems";
-import Cards from "../components/Card";
+import projectItems from "../constants/projectItems";
+import "../components/css/Card.css";
 import { Link } from "react-router-dom";
 function createCard(props){
     return  <Link
