@@ -1,8 +1,8 @@
 import React from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import imageByIndex2 from "./imageByIndex2";
 import { Link } from "react-router-dom";
+import projectItems from "../constants/projectItems";
 
 const EmblaCarousel = (props) => {
   const { slides, options } = props;
@@ -19,8 +19,8 @@ const EmblaCarousel = (props) => {
                 <Link to={`/projects/${index+5}`}>
                 <img
                   className="embla__slide__img"
-                  src={imageByIndex2(index)}
-                  alt="Your alt text"
+                  src={projectItems[index+5].imgURL}
+                  alt="Featured Projects"
                 />
                 </Link>
               </div>
