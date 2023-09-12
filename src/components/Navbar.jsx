@@ -82,9 +82,10 @@ const Navbar = () => {
               }}
             >
               <ul>
-                <li>HOME</li>
-                <li>ABOUT</li>
-                <li>CONTACT US</li>
+                <li><a href="/" onClick={() => scrollToSection('section1')}>Home</a></li>
+                <li><a href="./#about" onClick={() => scrollToSection('about')}>About</a></li>
+                <li><a href="./projects">Work</a></li>
+                <li><a onClick={() => scrollToSection('footer')}>ContactUs</a></li>
                 {/* <li>CONTACT</li> */}
               </ul>
             </GhostNavbar>
@@ -103,7 +104,7 @@ const Navbar = () => {
           <div className="nav_right">
             <ul>
               <FramerMagnetic>
-                <li><a href="./" onClick={() => scrollToSection('section1')}>Home</a>
+                <li><a href="/" onClick={() => scrollToSection('section1')}>Home</a>
                   <div class="underline"></div>
                 </li>
               </FramerMagnetic>
